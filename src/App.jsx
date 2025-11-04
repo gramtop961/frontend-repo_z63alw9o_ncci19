@@ -1,28 +1,22 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
+import Navigation from './components/Navigation';
+import SceneManager from './components/SceneManager';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [scene, setScene] = useState('genesis');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <div className="min-h-screen w-full bg-[#000814] text-white">
+      {/* Neon-glass navigation bar for scene switching */}
+      <Navigation current={scene} onChange={setScene} />
 
-export default App
+      {/* Scene manager with cinematic transitions */}
+      <SceneManager current={scene} />
+
+      {/* Below scenes, keep a minimal footer-like section to ground the page */}
+      <footer className="border-t border-white/10 bg-[#000814] py-10 text-center">
+        <p className="text-white/60">© {new Date().getFullYear()} NovaEra Hub — Designed by Nilesh Singh</p>
+      </footer>
+    </div>
+  );
+}
