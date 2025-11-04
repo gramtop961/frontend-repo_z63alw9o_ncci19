@@ -5,12 +5,15 @@ const tabs = [
   { key: 'genesis', label: 'Genesis Dome' },
   { key: 'ai', label: 'AI Realm' },
   { key: 'vision', label: 'Visionary Chamber' },
+  { key: 'sustainability', label: 'Sustainability' },
+  { key: 'future', label: 'Future Vision' },
+  { key: 'contact', label: 'Contact & Feed' },
 ];
 
 export default function Navigation({ current, onChange }) {
   return (
     <div className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#000814]/80 to-transparent backdrop-blur-xl">
-      <div className="mx-auto max-w-5xl px-4 py-4">
+      <div className="mx-auto max-w-6xl px-4 py-4">
         <div className="relative mx-auto inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/10 p-1 text-sm text-white/80 shadow-[0_0_30px_rgba(0,255,255,0.15)]">
           {/* Highlight pill */}
           <div className="relative">

@@ -3,11 +3,17 @@ import { AnimatePresence, motion } from 'framer-motion';
 import DomeIntro from './DomeIntro';
 import AiRealm from './AiRealm';
 import VisionaryChamber from './VisionaryChamber';
+import SustainabilityRealm from './SustainabilityRealm';
+import FutureVision from './FutureVision';
+import ContactFeed from './ContactFeed';
 
 const scenes = {
   genesis: <DomeIntro />,
   ai: <AiRealm />,
   vision: <VisionaryChamber />,
+  sustainability: <SustainabilityRealm />,
+  future: <FutureVision />,
+  contact: <ContactFeed />,
 };
 
 export default function SceneManager({ current }) {
